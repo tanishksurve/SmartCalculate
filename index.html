@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCalculate</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3094/3094839.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="calculator">
+    <!-- Top Bar -->
+    <div class="calculator-topbar">
+        <button class="menu-btn">☰</button>
+        <div class="app-title">SmartCalculate</div>
+        <div class ="history-btn">🕘</div>
+
+    </div>
+
+    <div class="bottom-history-drawer">
+        <div class="history-drawer-content">
+            <div class="history-drawer-header">
+                <h3>History</h3>
+                <button class="close-history-drawer">×</button>
+            </div>
+            <div class="history-list" id="historyList">
+                <div class="no-history">No calculations yet</div>
+            </div>
+            <div class="history-footer">
+                <button class="clear-history-btn">🗑️</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Side Drawer -->
+    <div class="side-drawer">
+        <div class="drawer-content">
+            <div class="drawer-header">
+                <h3>SmartCalculate</h3>
+                <button class="close-drawer">×</button>
+            </div>
+            <div class="drawer-tabs">
+                <div class="tab" data-tab="standard">Standard Calculator</div>
+                <div class="tab" data-tab="scientific">Scientific Calculator</div>
+                <div class="tab active" data-tab="settings">Settings</div>
+            </div>
+            
+            <div class="tab-content">
+                <!-- Standard Calculator Tab -->
+                <div class="tab-panel" id="standard-tab">
+                    <p>Switch to standard calculator mode.</p>
+                </div>
+                
+                <!-- Scientific Calculator Tab -->
+                <div class="tab-panel" id="scientific-tab">
+                    <p>Switch to scientific calculator mode.</p>
+                </div>
+                
+                <!-- Settings Tab -->
+                <div class="tab-panel active" id="settings-tab">
+                    <div class="theme-selector">
+                        <h4>Choose Theme</h4>
+                        <div class="theme-options">
+                            <label class="theme-option">
+                                <input type="radio" name="theme" value="dark" checked> 
+                                <span class="theme-label">Dark Theme</span>
+                            </label>
+                            <label class="theme-option">
+                                <input type="radio" name="theme" value="light"> 
+                                <span class="theme-label">Light Theme</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Calculator Display and Buttons -->
+    <div class="calculator-interface">
+        <!-- Standard Calculator -->
+        <div class="calculator-mode active" id="standard-calculator">
+            <input type="text" placeholder="0" id="inputbox">
+            <div>
+                <button class="operators">AC</button>
+                <button class="operators">Del</button>
+                <button class="operators">%</button>
+                <button class="operators">/</button>
+            </div>
+            <div>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class="operators">*</button>
+            </div>
+            <div>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button class="operators">-</button>
+            </div>
+            <div>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button class="operators">+</button>
+            </div>
+            <div>
+                <button>00</button>
+                <button>0</button>
+                <button>.</button>
+                <button class="equalbtn">=</button>
+            </div>
+        </div>
+
+        <!-- Scientific Calculator -->
+        <div class="calculator-mode" id="scientific-calculator">
+            <input type="text" placeholder="0" id="scientific-inputbox">
+            <div>
+                <button class="scientific-btn">sin</button>
+                <button class="scientific-btn">cos</button>
+                <button class="scientific-btn">tan</button>
+                <button class="scientific-btn">log</button>
+                <button class="scientific-btn">ln</button>
+                <button class="operators">AC</button>
+                <button class="operators">Del</button>
+                <button class="operators">%</button>
+                <button class="operators">/</button>
+            </div>
+            <div>
+                <button class="scientific-btn">π</button>
+                <button class="scientific-btn">e</button>
+                <button class="scientific-btn">√</button>
+                <button class="scientific-btn">x²</button>
+                <button class="scientific-btn">x³</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class="operators">*</button>
+            </div>
+            <div>
+                <button class="scientific-btn">x^y</button>
+                <button class="scientific-btn">1/x</button>
+                <button class="scientific-btn">|x|</button>
+                <button class="scientific-btn">(</button>
+                <button class="scientific-btn">)</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button class="operators">-</button>
+            </div>
+            <div>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button class="operators">+</button>
+            </div>
+            <div>
+                <button>00</button>
+                <button>0</button>
+                <button>.</button>
+                <button class="equalbtn">=</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
